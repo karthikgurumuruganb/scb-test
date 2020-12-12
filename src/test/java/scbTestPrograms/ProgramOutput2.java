@@ -1,4 +1,5 @@
 /**
+ * * QUESTION NO - 6 - B
  * This class to find the output of the program with reasons
  * @author Karthik
  * Date : 12/12/2020

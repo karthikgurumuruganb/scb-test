@@ -1,4 +1,5 @@
 /**
+ * * QUESTION NO - 1
  * This class to find duplicates from list and to find even number
  * @author Karthik
  * Date : 12/12/2020

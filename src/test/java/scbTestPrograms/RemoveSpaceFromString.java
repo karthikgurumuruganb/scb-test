@@ -1,4 +1,5 @@
 /**
+ * * QUESTION NO - 5
  * This class to remove multiple spaces from given String
  * @author Karthik
  * Date : 12/12/2020

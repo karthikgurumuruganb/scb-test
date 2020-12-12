@@ -1,4 +1,5 @@
 /**
+ * * QUESTION NO - 7
  * This class to parse the given json object
  * @author Karthik
  * Date : 12/12/2020
