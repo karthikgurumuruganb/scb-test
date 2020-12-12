@@ -1,0 +1,9 @@
+It is exciting times for the Selenium community as we have a lot of new features and enhancements that make Selenium WebDriver even more usable and scalable for practical use cases.
+Selenium is a suite of tools designed to support different user groups:
+Selenium IDE supports rapid test development, and doesn’t require extensive programming knowledge
+WebDriver provides a friendly and flexible API for browser automation in most major programming languages
+Grid makes it possible to distribute and run your tests across more than just one machine.
+Let us dive in and take a look at some of the significant features that were released in each of these tools and share some of the cool upcoming features that are in-progress and will be available in Selenium
+
+--------------------------------
+
