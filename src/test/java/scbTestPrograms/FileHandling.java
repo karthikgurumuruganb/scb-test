@@ -1,55 +1,70 @@
 /**
- * This class to find member who has taken more than 10 books
+ * This method is to find the string occurrences in the given file
  * @author Karthik
  * Date : 12/12/2020
  */
 
 package scbTestPrograms;
 
+
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
+import java.util.Scanner;
+
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
+
+import net.bytebuddy.NamingStrategy.SuffixingRandom.BaseNameResolver.ForGivenType;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class FileHandling {
 	
 	//** Declaration and definitions of variables
-	private static int key = 124;
+	private static String fileNameAndPath = "src/main/resources/testData/sampleFileToRead";
+	private static String stringToBeFound = "Selenium";
 	
 	@Test()
 	/**
-	 * /**
 	 * This method is to find the string occurrences in the given file
 	 * 	> A string array is created by splitting the file using space
 	 *  > Finding the Selenium keyword by traversing the entire array 
 	 */
 	 
-	public void findMemberDetails() {
+	public void findStringInFile() {
 		
-		System.out.println("### To find members who has taken more than 10 books ###");
+		System.out.println("### To find the string occurrences in the given file ###");
 		
 		//** To load the file using relative path
-		File file = new File("src/main/resources/testData/libraryRecords");
+		File file = new File(fileNameAndPath);
 		
-		//** To create a HashMap object - accounts
-	    HashMap<Integer, String> accounts = new HashMap<Integer, String>();
+		try {
+		    Scanner scanner = new Scanner(file);
+
+		    //** declations
+		    int lineNum = 0;
+		    int wordCount =0;
+		    
+		   //** To read the file line by line...
+		    while (scanner.hasNextLine()) {
+		        String line = scanner.nextLine();
+		        System.out.println(line);
+		        String[] texts = line.split(" ");
+		        for (String text:texts) {
+		        	if(text.equalsIgnoreCase(stringToBeFound)) {
+		        		wordCount= wordCount + 1;
+		        	}
+		        }
+		      lineNum++;
+		    }
+		    
+		    System.out.println("The given word "+stringToBeFound+ " appears "+ wordCount +" times");
+		    
+		} catch(FileNotFoundException e) { 
+		    System.out.println("File Not found in the given location!!");
+		}
 		
-	    //** To add keys and values (acctNo, name)
-	    accounts.put(123, "Kartik");
-	    accounts.put(456, "Guru");
-	    accounts.put(789, "Murugan");
-	    accounts.put(124, "Bala");
-	    accounts.put(125, "Subramanian");
-		
-	    //** To find key and value
-	    if (accounts.containsKey(key)) {
-	    	System.out.println(">> Key is found !!");
-	    	System.out.println(">> "+ accounts.get(key) + " is the value of the given key - "+key);
-	    }else {
-	    	System.out.println(">> Key is NOT found !!");
-	    }
 		
 	}
 	

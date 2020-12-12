@@ -26,7 +26,10 @@ public class ReadComplexDictionary {
 		System.out.println("### to read complex dictionary ###");
 		
 		//** To create a HashMap object - accounts
-		Map<String, String> accounts = Map.ofEntries();
+//		Map<String, String> accounts = Map.of(
+//				"a", "b",
+//				"c", "d"
+//				);
 		
 	}
 	
